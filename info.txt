@@ -1,0 +1,40 @@
+---> pour executer le code javascript
+node fichier.js 
+
+npm install --save mongoose
+npm install --save underscore
+
+npm list    pour voir tous les modules installer dans le projet 
+npm list --depth=0  pour voir seulement les noms packages sans le sous packages avec niveau 0 de l'arbre affiché
+
+---> affichier les dependencies d'un module exemple ici pour mongoose
+npm view mongoose dependencies
+
+--> affichier les version des parckages ici mongoose
+npm view mongoose versions
+
+--> les versions des parckages
+"dependencies": {
+    "mongoose": "^5.2.13",   <-- Magor.Minor.Patch ,  ^ ==> dire à node de recuprer une version mageure 5 ou plus  == ^5.x
+    "underscore": "^1.9.1"   ~ ==> permert de recuprer une version mageure 5 plus une mineure quelque soit le pache ==  ~5.2.x    
+  }
+
+--> mise a jour des packages
+----> afficher les infomations pour la mise à jour des packages du projet
+npm outdated
+----> afficher les infomations pour la mise à jour des packages global
+npm -g outdated
+----> update les packages
+npm update  , cette command met a jour avec une version stable mais pas la derniere version   
+---- pour recuprer la derniere version , il faut intaller un autre module 
+npm install -g  npm-check-updates      apres il faut executer la commande suivante pour le update
+npm-check-updates   ou avec shortcut  ==> ncu -u   -u pour upgrade   , jusqu 'a la on a seulement changant dans le fichier package.json
+npm install    pour finir la mise à jour 
+
+--> installer les packages que pour l'environement de dev
+npm i jshint --save-dev
+
+--> desinstaller un package dans un projet 
+npm uninstall mongoose  ou  npm un mongoose
+--> desinstaller un package global 
+npm uninstall -g nom-du-package  
