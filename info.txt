@@ -38,3 +38,14 @@ npm i jshint --save-dev
 npm uninstall mongoose  ou  npm un mongoose
 --> desinstaller un package global 
 npm uninstall -g nom-du-package  
+
+
+--> installation de Express
+npm install --save Express
+
+--> installer nodemon  => node Monitor  pour le live change du code , sans compiler a chaque fois dans la console
+npm install -g nodemon
+nodemon nom-fichier    => pour utiliser le watcher de nodemon
+
+-- installer joi => pour la validation des données envoyé par l'utilisation
+npm insall joi
