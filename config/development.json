@@ -1,0 +1,6 @@
+{
+    "name":"App NodeJs initialisation - Development - Env",
+    "mail":{
+        "host":"development-mail-server"
+    }
+}

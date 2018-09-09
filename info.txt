@@ -13,6 +13,21 @@ npm view mongoose dependencies
 --> affichier les version des parckages ici mongoose
 npm view mongoose versions
 
+--> 
+npm install helmet
+
+--> middelware pour logger les requetes http Request
+npm install morgan
+
+--> module pour la configuration des variables de l'application
+npm install config
+
+--> module pour debug 
+npm install debug
+
+--> module pour view engine Pug
+npm install pug
+
 --> les versions des parckages
 "dependencies": {
     "mongoose": "^5.2.13",   <-- Magor.Minor.Patch ,  ^ ==> dire à node de recuprer une version mageure 5 ou plus  == ^5.x

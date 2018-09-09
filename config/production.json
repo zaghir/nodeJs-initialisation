@@ -1,0 +1,6 @@
+{
+    "name":"App NodeJs initialisation - Production - Env",
+    "mail":{
+        "host":"production-mail-server"
+    }
+}
