@@ -64,3 +64,16 @@ nodemon nom-fichier    => pour utiliser le watcher de nodemon
 
 -- installer joi => pour la validation des données envoyé par l'utilisation
 npm insall joi
+
+-- installtion de mongoDB
+recupere l'installation sur le site www.mongodb.com --> download --> onglet Community Server --> selection windows 64
+s'il y un probleme d'installion de compase , allez sur le site --> download --> onglet Compase  et choisir la version windows 64
+compase c'est un outil offert par mongoDB pour administrer la base
+
+il faut ajouter le path de mongod.exe [le demon ] dans les variables d'environements pour que les commande mongo s execute depuis le CLI windows
+dans le termnile de windows 8 executer avanced et ajouter le chemin 
+exemple du chemin  C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe
+
+executer dans la cli mondod , si vous avez un probléme avec un message C:\data\db\  , dans ce cas il faut creer le dossier ou mongo staock les données
+executer compass avec les configuration par defaut , sur le localhost
+

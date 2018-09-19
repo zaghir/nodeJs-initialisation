@@ -12,10 +12,20 @@ const helmet = require('helmet');
 const Joi = require('joi');
 // on recuper une fonction à partir le package Express
 const express = require('express');
+// mongoose pour la persistance des données sur MongoDB
+const mongoose = require('mongoose');
+
+// connection à la base de données
+mongoose.connect('mongodb://localhost/databaseTest2')
+    .then(()=> console.log('connected to the MongoDB...'))
+    .catch((err)=>{ console.error('could not connect to MongoDb' , err)});
+
 
 // les service Rest pour Users
 const usersRoute = require('./routes/users');
 const homeRoute = require('./routes/homeRoute');
+const genresRoute = require('./routes/genres');
+const customer = require('./routes/customers');  
 
 // middleware 
 const logger = require('./middleware/logger');
@@ -36,6 +46,8 @@ app.use(helmet());
 
 // dire a express chaque requet pour la resource users , en la route vers usersRoute pour gerer la demande
 app.use('/api/users' , usersRoute);
+app.use('/api/genres', genresRoute);
+app.use('/api/cutomer',customer);
 app.use('/' , homeRoute);
 
 // Template View
@@ -64,7 +76,7 @@ console.log(`app : ${app.get('env')}`);
 // set le mot de pass 123456 ==> export app_password=123456
 console.log("Application Name "+config.get("name"));
 console.log("Mail Server "+config.get("mail.host"));
-console.log("Mail Password "+config.get("mail.password"));
+console.log("Mail Password "+config.get("mail.password")); // cette variable est recuperer depuis le system
 
 // middleware morgan 
 // test url --> http://localhost:3000/api/users
