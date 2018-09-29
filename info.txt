@@ -4,6 +4,8 @@ node fichier.js
 npm install --save mongoose
 npm install --save underscore
 
+--> npm install --save fawn      pour les transactions ( implementation de Tow Phases Commits) 
+
 npm list    pour voir tous les modules installer dans le projet 
 npm list --depth=0  pour voir seulement les noms packages sans le sous packages avec niveau 0 de l'arbre affiché
 
@@ -27,6 +29,9 @@ npm install debug
 
 --> module pour view engine Pug
 npm install pug
+
+--> framework pour les tests unitaires 
+npm install jest --save-dev 
 
 --> les versions des parckages
 "dependencies": {

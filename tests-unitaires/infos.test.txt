@@ -1,0 +1,24 @@
+--> framework pour les tests unitaires 
+npm install jest --save-dev
+
+  les tests unitaires sont executés seulement dans les environements de dev de test mais pas dans l environement de production
+  il faut modifier dans le fichier package.json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  par 
+  "scripts": {
+    "test": "jest"
+  },
+  dans le CLi executé    npm test     jest se trouve dans le dossier bin
+
+  quant il y  a aucun test on recupere un message 
+  testMatch: **/__tests__/**/*.js?(x),**/?(*.)+(spec|test).js?(x) - 0 matches
+
+  jest applique un filtre sur les fichiers du projet , si le fichier un a nom avec .test.js  ou spec.js il l'execute avec son runner
+
+  on peut lancer jest en mode watch pour un chargement automatique des test modifié
+  pour le faire il faut dans package.json  ajouter le mode param --watchAll
+  "scripts": {
+    "test": "jest --watchAll"
+  },
